@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1023297129584",
+    "project_id": "workout-app-17fe1",
+    "storage_bucket": "workout-app-17fe1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1023297129584:android:733046e6465fc48c12b8b5",
+        "android_client_info": {
+          "package_name": "com.github.welblade.workoutapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1023297129584-e5nbvar79istj022kh0dqtb8eg9tecoc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCm7FJxsbuOQABB6t3DZmuTHAj82O5W-1w"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1023297129584-e5nbvar79istj022kh0dqtb8eg9tecoc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
