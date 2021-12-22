@@ -1,7 +1,8 @@
-package com.github.welblade.workoutapp
+package com.github.welblade.workoutapp.presentation.ui.main
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.github.welblade.workoutapp.R
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
