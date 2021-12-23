@@ -24,7 +24,7 @@ class RoutineItemAdapter : ListAdapter<Routine, RoutineItemAdapter.ViewHolder>(D
     inner class ViewHolder(private val binding: ItemRoutineBinding): RecyclerView.ViewHolder(binding.root) {
         fun bind(routine: Routine) {
             val dayOfWeek = routine.date.toDate().format("E")
-            binding.tvDayOfWeek.text = dayOfWeek
+            binding.tvDayOfWeek.text = dayOfWeek.uppercase()
             binding.tvName.text = routine.name
             binding.tvDescription.text = routine.description
         }

@@ -63,6 +63,7 @@ dependencies {
     implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.4.0'
     // https://www.konform.io
     implementation 'io.konform:konform-jvm:0.3.0'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
 
     testImplementation 'io.mockk:mockk:1.12.1'
     // (Required) Writing and executing Unit Tests on the JUnit Platform

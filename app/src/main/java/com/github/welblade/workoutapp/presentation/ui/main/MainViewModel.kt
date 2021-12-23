@@ -23,9 +23,9 @@ class MainViewModel(
         viewModelScope.launch{
             listRoutines()
                 .flowOn(Dispatchers.Main)
-                .onStart { _state.value = State.Loading }
-                .catch { _state.value = State.Error(it) }
-                .collect{_state.value = State.Success(it) }
+                .onStart{ _state.value = State.Loading }
+                .catch  { _state.value = State.Error(it) }
+                .collect{ _state.value = State.Success(it) }
         }
     }
 

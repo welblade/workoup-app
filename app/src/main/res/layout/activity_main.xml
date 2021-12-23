@@ -48,17 +48,29 @@
         app:layout_constraintBottom_toBottomOf="parent"
         tools:listitem="@layout/item_routine"
         />
-
+    <FrameLayout
+        android:id="@+id/fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:elevation="755dp"
+        app:elevation="755dp"
+        >
+    </FrameLayout>
     <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fb_add_routine"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintEnd_toEndOf="@id/gl_end"
         app:layout_constraintBottom_toBottomOf="parent"
+        android:elevation="0dp"
+        app:elevation="0dp"
         android:layout_marginBottom="@dimen/layout_double_padding"
         android:contentDescription="Add a new routine"
         android:src="@drawable/ic_add"
         />
-
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/gl_start"
         android:layout_width="wrap_content"

@@ -1,6 +1,8 @@
 package com.github.welblade.workoutapp.presentation.di
 
 import com.github.welblade.workoutapp.presentation.ui.login.LoginViewModel
+import com.github.welblade.workoutapp.presentation.ui.main.MainViewModel
+import com.github.welblade.workoutapp.presentation.ui.main.RoutineFormViewModel
 import com.github.welblade.workoutapp.presentation.ui.register.RegisterViewModel
 import org.koin.androidx.viewmodel.dsl.viewModel
 import org.koin.core.context.loadKoinModules
@@ -16,6 +18,8 @@ object PresentationModules {
         return module {
             viewModel { LoginViewModel(get())}
             viewModel { RegisterViewModel(get()) }
+            viewModel { MainViewModel(get()) }
+            viewModel { RoutineFormViewModel(get()) }
         }
     }
 }

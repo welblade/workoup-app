@@ -14,4 +14,6 @@
     <string name="login">LogIn</string>
     <string name="register_a_account">Register a account</string>
     <string name="name">Name</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

@@ -11,13 +11,33 @@ import org.koin.androidx.viewmodel.ext.android.viewModel
 class MainActivity : AppCompatActivity() {
     private val binding: ActivityMainBinding by lazy { ActivityMainBinding.inflate(layoutInflater) }
     private val itemAdapter by lazy { RoutineItemAdapter() }
-    private val mainViewModel: MainViewModel by viewModel()
+    private val mainViewModel by viewModel<MainViewModel>()
     private val progress by lazy { createProgressDialog() }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
         setRecyclerView()
         setViewModelObserver()
+        setListeners()
+        updateList()
+    }
+
+    private fun updateList() {
+        mainViewModel.getRoutineList()
+    }
+
+    private fun setListeners() {
+        binding.fbAddRoutine.setOnClickListener {
+            val routineForm = RoutineFormFragment()
+            val transaction = supportFragmentManager.beginTransaction()
+            transaction.replace(binding.fragmentContainer.id, routineForm)
+            transaction.addToBackStack(null)
+            transaction.commit()
+            routineForm.onDetachListener = {
+                updateList()
+            }
+        }
     }
 
     private fun setRecyclerView() {
@@ -38,6 +58,7 @@ class MainActivity : AppCompatActivity() {
                     }.show()
                 }
                 is MainViewModel.State.Success -> {
+                    progress.dismiss()
                     itemAdapter.submitList(it.routines)
                 }
             }

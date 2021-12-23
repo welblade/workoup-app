@@ -29,7 +29,7 @@ object DataModules {
     private fun repositoryModule(): Module {
         return module{
             single<LoginUserRepository> { LoginUserRepositoryImpl(get()) }
-            single<RoutineRepository> { RoutineRepositoryImpl(get()) }
+            single<RoutineRepository> { RoutineRepositoryImpl(get(), get()) }
             single<ExerciseListRepository> { ExerciseListRepositoryImpl(get()) }
         }
     }
